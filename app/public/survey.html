@@ -39,9 +39,9 @@
             <div class="card">
                 <h3><strong>Question 1</strong></h3>
                 <p>Pick a symbal which can represent you.</p>
-                <img src="https://github.com/Simonkcoding/FriendFinder/blob/master/app/public/img/1.jpg" alt="1"><br />
+                <img src="img/1.jpg" alt="1"><br />
                 <select class="chosen-select" id="q1">
-                    <option value=""></option>
+                    <option value="" selected disabled hidden>Choose here</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -53,9 +53,9 @@
             <div class="card">
                 <h3><strong>Question 2</strong></h3>
                 <p>Pick a flower which attract your first attention.</p>
-                <img src="https://github.com/Simonkcoding/FriendFinder/blob/master/app/public/img/2.jpg" alt="2"><br />
+                <img src="./img/2.jpg" alt="2"><br />
                 <select class="chosen-select" id="q2">
-                    <option value=""></option>
+                    <option value="" selected disabled hidden>Choose here</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -68,7 +68,7 @@
                 <h3><strong>Question 3</strong></h3>
                 <h4>You obsess with fantasies and ideas.</h4>
                 <select class="chosen-select" id="q3">
-                    <option value=""></option>
+                    <option value="" selected disabled hidden>Choose here</option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -80,9 +80,9 @@
             <div class="card">
                 <h3><strong>Question 4</strong></h3>
                 <p>Pick a perfume container.</p>
-                <img src="https://github.com/Simonkcoding/FriendFinder/blob/master/app/public/img/4.jpg" alt="4"><br />
+                <img src="./img/4.jpg" alt="4"><br />
                 <select class="chosen-select" id="q4">
-                    <option value=""></option>
+                    <option value="" selected disabled hidden>Choose here</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -95,7 +95,7 @@
                 <h3><strong>Question 5</strong></h3>
                 <h4>You are willing to die for something which fascinate you.</h4>
                 <select class="chosen-select" id="q5">
-                    <option value=""></option>
+                    <option value="" selected disabled hidden>Choose here</option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -107,9 +107,9 @@
             <div class="card">
                 <h3><strong>Question 6</strong></h3>
                 <p>Choose a place where you want to live.</p>
-                <img src="https://github.com/Simonkcoding/FriendFinder/blob/master/app/public/img/5.jpg" alt="5"><br />
+                <img src="./img/5.jpg" alt="5"><br />
                 <select class="chosen-select" id="q6">
-                    <option value=""></option>
+                    <option value="" selected disabled hidden>Choose here</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -122,7 +122,7 @@
                 <h3><strong>Question 7</strong></h3>
                 <h4>It is often difficult for you to relate to other people’s feelings.</h4>
                 <select class="chosen-select" id="q7">
-                    <option value=""></option>
+                    <option value="" selected disabled hidden>Choose here</option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -134,9 +134,9 @@
             <div class="card">
                 <h3><strong>Question 8</strong></h3>
                 <p>Choose an animal which can represent you.</p>
-                <img src="https://github.com/Simonkcoding/FriendFinder/blob/master/app/public/img/3.jpg" alt="3"><br />
+                <img src="./img/3.jpg" alt="3"><br />
                 <select class="chosen-select" id="q8">
-                    <option value=""></option>
+                    <option value="" selected disabled hidden>Choose here</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -149,7 +149,7 @@
                 <h3><strong>Question 9</strong></h3>
                 <h4>You are a good listener.</h4>
                 <select class="chosen-select" id="q9">
-                    <option value=""></option>
+                    <option value="" selected disabled hidden>Choose here</option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -162,7 +162,7 @@
                 <h3><strong>Question 10</strong></h3>
                 <h4>You are an introvert.</h4>
                 <select class="chosen-select" id="q10">
-                    <option value=""></option>
+                    <option value="" selected disabled hidden>Choose here</option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -174,7 +174,7 @@
             <br>
 
             <!-- Submit Button -->
-            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
+            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit" onClick="calculate()">
                 <i class="fa fa-check-circle"></i>Submit</button>
 
             <hr>
@@ -188,20 +188,19 @@
 
     </div>
 
-    <!-- Modal -->
-    <div id="results-modal" class="modal fade" role="dialog">
+
+    <!--why do we need a modal?-->
+    <div id="myModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h2 class="modal-title"><strong>Best Match</strong></h2>
+                    <h4 class="modal-title">A person who may be your friend...</h4>
                 </div>
                 <div class="modal-body">
                     <h2 id="match-name"></h2>
-                    <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg"
-                        alt="">
+                    <img id="match-img">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -212,6 +211,38 @@
     </div>
 
     <script>
+        calculate = () => {
+            event.preventDefault();
+            let newAmigo = {
+                name: $('#name').val().trim(),
+                photo: $('#photo').val().trim(),
+                "scores": [
+                    $('#q1').val(),
+                    $('#q2').val(),
+                    $('#q3').val(),
+                    $('#q4').val(),
+                    $('#q5').val(),
+                    $('#q6').val(),
+                    $('#q7').val(),
+                    $('#q8').val(),
+                    $('#q9').val(),
+                    $('#q10').val()
+                ]
+            }
+
+            $.post("/api/friends", newAmigo)
+                .then(function (data) {
+                    $("#match-name").text(data.name);
+                    $("#match-img").attr("src", data.photo);
+
+                    // Show the modal with the best match
+                    $("#myModal").modal("toggle");
+
+                });
+
+           
+        }
+
 
     </script>
 
